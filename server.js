@@ -6,6 +6,11 @@ const bodyParser = require('body-parser')
 const app = express();
 
 
+//middleware
+app.use(morgan('dev'))
+app.use(bodyParser.json());
+
+
 
 
 
