@@ -1,12 +1,15 @@
-module.exports = {
-  signUp: async(req,res,next){
+//functions to be used as middlewares
+ function signUp(req,res,next){
     console.log('this is the signup function')
-  },
-  signIn: async(req,res,next){
+  }
+
+  function signIn(req,res,next){
     console.log('this is the signIn function')
-  },
-  secret: async(req,res,next){
+  }
+
+   function secret(req,res,next){
     console.log('this is the secret function')
   }
 
-}
+//export functions to be used as modules for middleware
+module.exports = {signIn,signUp,secret}
