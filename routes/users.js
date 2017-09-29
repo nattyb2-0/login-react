@@ -6,7 +6,9 @@ const {signUp,signIn,secret} = require('../models/users.js');
 
 //set up routes
 router.route('/signup')
-  .post(signUp)
+  .post(signUp,(req,res)=>{
+    res.status(200).send('posted signup into db succesfully')
+  })
 
 router.route('/signin')
   .post(signIn)

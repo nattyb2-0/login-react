@@ -1,0 +1,12 @@
+BEGIN;
+
+DROP TABLE IF EXISTS users CASCADE;
+
+CREATE TABLE users (
+  userId SERIAL PRIMARY KEY,
+  username VARCHAR NOT NULL ,
+  email VARCHAR NOT NULL,
+  password VARCHAR NOT NULL
+ );
+
+COMMIT;
